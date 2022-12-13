@@ -1,34 +1,30 @@
 #include <iostream>
 #include <map>
-#include <algorithm>
+#include <vector>
 using namespace std;
 
-const int MAXN = 5e5 + 7;
-int arr[MAXN];
-int n;
+int n, karta, b, nr;
 string out;
 
 int main() {
     ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    cin.tie(0); cout.tie(0);
 
-    map<int, int> m;
+    map<int, int> cards;
     cin >> n;
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    out += "1\n";
-    m.insert({arr[0], 1});
-    for (int i = 1; i < n; i++) {
-        auto it = m.lower_bound(arr[i] + 1);
-        if (*it > arr[i]) {
-            cout << arr[i] << " " << *it << "\n";
-            place = m[it];
-            m.erase(it);
-            m.insert({arr[i], 0});
+    for (int i = 0; i < n; ++i) {
+        cin >> karta;
+        auto znal = cards.upper_bound(karta);
+        if (znal == cards.end()) {
+            out += "1\n";
+            cards[karta] = ++nr;
         }
-        else
-            cout << 1 << "\n";
+        else {
+            b = (*znal).second;
+            cards.erase(znal);
+            cards[karta] = b;
+            out += ("2 " + to_string(b) + "\n");
+        }
     }
+    cout << nr << '\n' << out;
 }
