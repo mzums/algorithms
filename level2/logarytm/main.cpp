@@ -23,7 +23,6 @@ int logarytm() {
         akt = (akt * 1ll * an) % p;
         if (wartosci.count(akt)) {
             int ans = n * i - wartosci[akt];
-            cout << i << " ";
             return ans;
         }
     }
