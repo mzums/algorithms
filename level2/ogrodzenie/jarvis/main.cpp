@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 #include <cmath>
 #include <iomanip>
 using namespace std;
@@ -42,6 +43,9 @@ double convexHull() {
 }
 
 int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+    
     cin >> n;
     for (int i = 0; i < n; i++) cin >> points[i].x >> points[i].y;
     cout << fixed << setprecision(10) << convexHull();

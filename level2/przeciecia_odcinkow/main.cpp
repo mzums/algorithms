@@ -4,7 +4,7 @@ typedef long long ll;
 
 struct Point {
     ll x, y;
-};
+};  
 
 int orientation(Point p, Point q, Point r) {
     ll val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
