@@ -16,7 +16,7 @@ void dfs1(int v, int p) {
             siz[v] += siz[u.first];
             dp[v] += siz[u.first]*u.second + dp[u.first];
         }
-}
+} 
 
 void dfs2(int v, int p) {
     for (auto x : G[v])

@@ -20,4 +20,4 @@ int main()
 
     if (dp[k] < MAXN) cout << dp[k]; 
     else cout << "NIE";
-}
+} 

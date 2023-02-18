@@ -17,4 +17,4 @@ int main()
             dp[j] = max(dp[j], dp[j-price]+tasty);
     }
     cout << dp[k];
-}
+} 
