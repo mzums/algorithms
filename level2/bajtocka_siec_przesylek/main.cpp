@@ -10,7 +10,7 @@ ll dp[MAXN], f[MAXN];
 int n, a, b, c;
 
 void dfs1(int v, int p) {
-    for (auto u : G[v])
+    for (auto u : G[v]) 
         if (u.first != p) {
             dfs1(u.first, v); 
             siz[v] += siz[u.first];

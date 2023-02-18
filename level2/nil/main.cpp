@@ -12,7 +12,7 @@ vector<int> G[MAXN];
 void dfs (int v, int p) {
     ll maximum = 0;
     for (auto u : G[v])
-        if (u != p) {
+        if (u != p) { 
             dfs(u, v);
             maximum = max(maximum, dp[u]);
         }

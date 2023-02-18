@@ -18,6 +18,6 @@ int main()
         for (int j = arr[i]; j <= k; j++)
             dp[j] = min(dp[j], dp[j-arr[i]]+1);
 
-    if (dp[k] < MAXN) cout << dp[k];
+    if (dp[k] < MAXN) cout << dp[k]; 
     else cout << "NIE";
 }
