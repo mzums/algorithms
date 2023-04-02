@@ -8,7 +8,6 @@ const int MAXN = 5e5+7;
 const ll INF = 1e15+7;;
 vector <pair<int, int>> G[MAXN];
 ll dist[2*MAXN];
-int pre[MAXN];
 priority_queue <pair<ll, int>> q;
 
 void dijkstra(int v) {
@@ -20,7 +19,6 @@ void dijkstra(int v) {
         for (int i = 0; i < (int)G[v].size(); i++) {
             u = G[v][i].first;
             if (dist[u] > dist[v] + G[v][i].second) {
-                pre[u] = v;
                 dist[u] = min(dist[u], dist[v] + G[v][i].second);
                 q.push({-dist[u], u});
             }
@@ -42,13 +40,6 @@ int main() {
         G[b].push_back({a, w});
     }
     dijkstra(1);
-    for (int i = 0; i < n; i++)
-        if (dist[n] == INF) score.push_back(-1);
-    v = n;
-    while(v != 0) {
-        score.push_back(v);
-        v = pre[v];
-    }
     for (int i = 1; i <= n; i++) {
         if (dist[i] == INF) cout << "-1\n";
         else cout << dist[i] << "\n";
