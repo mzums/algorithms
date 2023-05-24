@@ -21,4 +21,4 @@ int main() {
         cin >> x >> y;
         cout << b[y] - b[x-1] << "\n";
     }
-}
+} 
