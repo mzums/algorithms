@@ -4,7 +4,7 @@ using namespace std;
 const int MAXN = 5e5+7, MOD = 1e9+7;
 int sum_dp[MAXN];
 
-int main() {
+int main() { 
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
 
