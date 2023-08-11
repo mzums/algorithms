@@ -16,5 +16,5 @@ https://www.oi.edu.pl/
 SZKOpuł: https://szkopul.edu.pl/<br>
 solve: https://solve.edu.pl/<br>
 cses: https://cses.fi/<br>
-The lessons, level and wwi folders contain problems from my IT lessons, additional classes held in my school and algorithmic camps organised by my school.<br>
+The lessons, level and wwi folders contain problems from my IT lessons, additional classes held in my school and algorithmic camps organized by my school.<br>
 my school's sio2: https://sio2.staszic.waw.pl/<br>
