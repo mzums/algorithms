@@ -5,7 +5,7 @@ Please note that some of them (e.g. Szkopuł) might not provide all the problems
 ## Code copying
 I'm glad if my code is helpful to someone, but it's important to remember that mindlessly copying code solely for the purpose of gaining points is not educational.
 
-## Why c++?
+## Why C++?
 All the code is written in c++ since it is one of the most popular languages in competitive programming.
 
 ## Why am I doing this?
