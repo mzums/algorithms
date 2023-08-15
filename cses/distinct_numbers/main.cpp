@@ -14,4 +14,4 @@ int main() {
         s.insert(a);
     }
     cout << s.size();
-}
+} 
