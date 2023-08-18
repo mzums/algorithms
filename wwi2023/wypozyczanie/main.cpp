@@ -34,4 +34,4 @@ int main(){
     sort(prices, prices+m, std::greater<>());
     sort(bud, bud+n, std::greater<>());
     cout << bin(0, min(n, m)+1, a);
-}
+} 
