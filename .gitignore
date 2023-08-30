@@ -1,5 +1,12 @@
+# Ignoruj wszystkie pliki wykonywalne (pliki bez rozszerzenia)
 *
-!*.cpp
 !*/
 !.gitignore
-Testy
+!*.png
+!*.md
+
+# Nie ignoruj plików źródłowych C++
+!*.cpp
+
+# Nie ignoruj katalogu Testy
+!Testy/
