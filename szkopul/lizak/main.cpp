@@ -8,7 +8,7 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
 
-    int n, m, res=0, l, r, summ, lastone=-1, firstone=-1, a;
+    int n, m, res=0, l, r, summ, lastw=-1, firstw=-1, a;
     string str;
     cin >> n >> m >> str;
     for (int i = 0; i <= 2*n; i++) arr[i] = {-1, -1};
@@ -16,8 +16,8 @@ int main() {
         if (str[i] == 'T') res += 2;
         else {
             res++;
-            lastone = i;
-            if (firstone == -1) firstone = i;
+            lastw = i;
+            if (firstw == -1) firstw = i;
         }
     }
     l = 0; r = n-1;
@@ -32,15 +32,15 @@ int main() {
         }
         summ -= 2;
     }
-    if (firstone < n-1-lastone) {
-        l = firstone+1;
+    if (firstw < n-1-lastw) {
+        l = firstw+1;
         r = n-1;
-        summ = res - 2*firstone - 1;
+        summ = res - 2*firstw - 1;
     }
     else {
         l = 0;
-        r = lastone-1;
-        summ = res - 2*(n-1-lastone) - 1;
+        r = lastw-1;
+        summ = res - 2*(n-1-lastw) - 1;
     }
     while (summ > 0) {
         arr[summ] = {l, r};
