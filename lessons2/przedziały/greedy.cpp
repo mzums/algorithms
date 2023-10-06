@@ -11,7 +11,7 @@ int main() {
 
     int n, topp=0, res=0;
     cin >> n;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; ++i)
         cin >> arr[i].second >> arr[i].first;
     sort(arr, arr+n);
 
