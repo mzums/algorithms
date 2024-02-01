@@ -1,4 +1,3 @@
-// WITHOUT '{}' 
 #include <iostream>
 using namespace std;
 
