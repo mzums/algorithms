@@ -19,9 +19,9 @@ int main() {
     cin.tie(0);
 
     int m, n, w, h;
-    cin >> m >> n;
+    scanf("%d%d", &m, &n);
     for (int i = 0; i < n; ++i) {
-        cin >> w >> h;
+        scanf("%d%d", &w, &h);
         arr[i] = {w, h};
     }
     sort(arr, arr+n, Sort);
@@ -43,5 +43,5 @@ int main() {
             pq.pop();
         }
     }
-    cout << res;
+    printf("%d", res);
 }
