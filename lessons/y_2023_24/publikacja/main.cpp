@@ -35,4 +35,4 @@ int main() {
         else len = lps[len];
     }
     cout << "0\n";
-} 
+}
