@@ -3,7 +3,6 @@
 using namespace std;
 
 constexpr int MAXN = 1e6+7;
-pair<int, int> arr[MAXN];
 int rep[MAXN], min_iq[MAXN], max_iq[MAXN], mass[MAXN];
 
 int Find(int x) {
@@ -31,9 +30,9 @@ int main() {
     string op;
     cin >> n;
     for (int i = 1; i <= n; ++i) {
-        cin >> arr[i].first >> arr[i].second;
-        min_iq[i] = max_iq[i] = arr[i].second;
-        mass[i] = arr[i].first;
+        cin >> a >> b;
+        min_iq[i] = max_iq[i] = a;
+        mass[i] = b;
     }
     for (int i = 1; i <= n; ++i) rep[i] = i;
     while (cin >> op) {
