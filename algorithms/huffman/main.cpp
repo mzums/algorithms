@@ -1,9 +1,11 @@
 #include <iostream>
 #include <map>
+#include <vector>
 
 using namespace std;
 
 multimap<double, int> m;
+vector<int> G[257];
 
 constexpr double frequencies[] = {
     (8.965 + 1.021) / 100, 1.482 / 100, (3.988 + 0.448) / 100, 3.293 / 100, (7.921 + 1.131) / 100, 
@@ -24,6 +26,32 @@ int main() {
         m.insert({frequencies[i], i});
     }
     cout << m.begin()->second << endl;
+    int idx = 26;
+
+    while (m.size() > 1){
+        int a = m.begin()->second;
+        double freqA = m.begin()->first;
+        m.erase(m.begin());
+
+        int b = m.begin()->second;
+        double freqB = m.begin()->first;
+        cout << "a: " << a << " b: " << b << endl;
+        m.erase(m.begin());
+
+        m.insert({freqA + freqB, idx});
+        G[idx].push_back(a);
+        G[idx].push_back(b);
+        idx++;
+    }
+
+    int lastIdx = idx - 1;
+    cout << "Last element: " << m.begin()->second << endl;
+
+    for (int i = 26; i <= lastIdx; i++){
+        for (int j = 0; j < G[i].size(); j++) {
+            cout << i << " " << G[i][j] << '\n';
+        }
+    }
 
     return 0;
 }
